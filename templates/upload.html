@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<title>Apriori Algorithm Demo</title>
+
+<style>
+    .box {
+        text-align: center;
+        width: 80%;
+        padding: 15%;
+        background-color: rgb(82, 157, 206);
+        border-radius: 20;
+        border: 15px solid rgb(13, 15, 131);
+    }
+
+    .box-s {
+        margin: auto;
+        padding: auto;
+        text-align: center;
+
+    }
+
+    .navbar-nav .nav-item a {
+        color: aliceblue;
+    }
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand text-danger " href="#">Matching Basket</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/">Home</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/upload">Upload File</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container text-center ">
+        <div class="row justify-content-md-center">
+            <h1><b>Add File Demo</b> </h1>
+
+            <div class="box">
+                <form method="post" action="/apriori" enctype="multipart/form-data">
+                    <input type="file" name="file">
+                    <label for="support">Minimum support:</label>
+                    <input type="number" name="support" id="support" step="0.01" min="0" max="1" value="0.5"
+                        required>
+                    <br>
+                    <label for="confidence">Minimum confidence:</label>
+                    <input type="number" name="confidence" id="confidence" step="0.01" min="0" max="1"
+                        value="0.5" required>
+                    <br>
+
+                    <input type="submit" value="Submit">
+                    <!-- <button type="submit">Run Apriori</button> -->
+                    <!-- <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Add File
+                        </button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Confirm to select this file.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-danger">Save changes</button>
+                                    </div>
+                                </div>
+                            </div> -->
+                </form>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

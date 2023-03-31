@@ -1,0 +1,22 @@
+{% if num_results > 0 %}
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th>Rule</th>
+                <th>Support</th>
+                <th>Confidence</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(num_results) %}
+                <tr>
+                    <td>{{ query.iloc[i]['Rule'] }}</td>
+                    <td>{{ query.iloc[i]['Support'] }}</td>
+                    <td>{{ query.iloc[i]['Confidence'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No results found.</p>
+{% endif %}
